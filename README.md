@@ -153,7 +153,9 @@ You can push your Docker image to GitHub Container Registry to share and deploy 
 ```bash
 docker login ghcr.io
 ```
-
+To login with a different account : 
+```bash docker logout ghcr.io
+```
 ### Step 2: Tag your Docker image
 
 ```bash
