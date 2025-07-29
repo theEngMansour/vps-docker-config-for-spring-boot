@@ -143,3 +143,31 @@ docker run --name spring-app --network test-net -p 8080:2000 connection:v1.6
 ```
 
 ---
+
+## 10. Upload Docker Image to GitHub Container Registry (GHCR)
+
+You can push your Docker image to GitHub Container Registry to share and deploy it easily.
+
+### Step 1: Login to GitHub Container Registry
+
+```bash
+docker login ghcr.io
+```
+
+### Step 2: Tag your Docker image
+
+```bash
+docker tag connection:v1.6 ghcr.io/yourusername/vps-docker-config-spring-boot:v1.6
+```
+### Step 3: Tag your Docker image
+
+```bash
+docker push ghcr.io/yourusername/vps-docker-config-spring-boot:v1.6
+```
+### Step 4: Use your image
+
+```bash
+docker pull ghcr.io/yourusername/vps-docker-config-spring-boot:v1.6
+```
+
+
